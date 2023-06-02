@@ -1,0 +1,94 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <nb-card  [style.width.px]="800" [style.height.px]="500">
+        <nb-card-header>Visualisation</nb-card-header>
+        <nb-card-body >
+          <canvas #chartCanvas></canvas>
+        </nb-card-body>
+      </nb-card>
+    </div>
+
+
+
+    <div class="col-lg-3  ml-auto ">
+      <div class="sidebar">
+
+        <label for="chartType">Chart Type:</label>
+
+        <select (change)="selectedChartType = $event.target.value; updateChart(selectedChartType)">
+          <option value="" disabled selected style="display:none;"></option>
+          <option value="line" [ngClass]="{'active': selectedChartType === 'line'}">Line</option>
+          <option value="bar" [ngClass]="{'active': selectedChartType === 'bar'}">Bar</option>
+          <option value="pie" [ngClass]="{'active': selectedChartType === 'pie'}">Pie</option>
+          <option value="scatter" [ngClass]="{'active': selectedChartType === 'scatter'}">Scatter</option>
+          <option value="horizontalBar" [ngClass]="{'active': selectedChartType === 'horizontalBar'}">Horizontal Bar</option>
+          <option value="radar" [ngClass]="{'active': selectedChartType === 'radar'}">Radar</option>
+
+
+
+
+        </select>
+        <button class="btn btn-primary" nbButton  (click)="onSaveChart(selectedChartType)" [ngClass]="{'active': selectedChartType}" >Save Chart</button>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div>
+  <label>
+    <input type="radio" name="chartType" value="line" [ngClass]="{ 'selected': selectedChartType === 'line'} " (change)="updateChart('line')"> Line
+  </label>
+  <label>
+    <input type="radio" name="chartType" value="bar" [ngClass]="{ 'selected': selectedChartType === 'bar' }" (change)="updateChart('bar')"> Bar
+  </label>
+  <label>
+    <input type="radio" name="chartType" value="pie" [ngClass]="{ 'selected': selectedChartType === 'pie' }" (change)="updateChart('pie')"> Pie
+  </label>
+</div>-->
+
+
+<!--<select (change)="updateChart($event.target.value)">
+  <option value="" disabled selected style="display:none;">Chart Type</option>
+  <option [value]="'line'" [selected]="selectedChartType === 'line'">Line</option>
+  <option [value]="'bar'" [selected]="selectedChartType === 'bar'">Bar</option>
+  <option [value]="'pie'" [selected]="selectedChartType === 'pie'">Pie</option>
+</select>-->
+
+<!--<span *ngIf="selectedChartType">{{selectedChartType}}</span>-->
+ <!-- <ng-container *ngIf="selectedChartType === 'line' || selectedChartType === 'bar' || selectedChartType === 'pie'">
+  <div class="title-input">
+    <label for="chartTitle">Chart Title:</label>
+    <input type="text" id="chartTitle" [(ngModel)]="chartTitle">
+  </div>
+</ng-container> -->
+
+<!--<button (click)="onSaveChart(selectedChartType)">Save Chart</button>-->
+<!-- <div class="col-md-12 col-lg-6 col-xxxl-3">
+  <nb-card class="form-input-card">
+    <nb-card-header>Return Result From Dialog</nb-card-header>
+    <nb-card-body class="result-from-dialog">
+      <button nbButton (click)="open3();onSaveChart(selectedChartType);">Enter Title</button>
+      <br>
+      <h3 class="title">Names:</h3>
+      <ul>
+        <li *ngFor="let name of names">{{ name }}</li>
+      </ul>-->
+   <!-- </nb-card-body>
+  </nb-card>
+</div> -->

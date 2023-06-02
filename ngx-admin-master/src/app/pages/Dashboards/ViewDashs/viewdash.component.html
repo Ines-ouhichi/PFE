@@ -1,0 +1,27 @@
+<body style="background-color:rgb(255, 252, 248);">
+    <div class="container mt-5 mb-5">
+    
+        <div class="row">
+    
+            <div class="col-lg-4" *ngFor="let d of dashboard">
+    
+                <div class="foodbox mt-3 mb-3">
+                    <img src="https://ouch-cdn2.icons8.com/nvH6W1Mslbr7agvnSSu185g7dS8bF-AqAdFfMqoNWu4/rs:fit:256:245/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjg1/L2IyMjQ0YTM2LTdl/MTktNDhmMS04OTgx/LTkzMzNlNGRlM2I5/MS5wbmc.png">
+                    <h1>{{d.name}}</h1>
+                    <p>{{d.description}}</p>
+                    <br/><a (click)="viewDashboardCharts(d)">view</a>
+                    
+                </div>
+    
+            </div>
+    
+    
+    
+        </div>
+    
+    </div>
+    </body>
+    
+
+
+<button nbButton class="btn btn-primary" (click)=" getDashboards()">Save to Dashboard</button>

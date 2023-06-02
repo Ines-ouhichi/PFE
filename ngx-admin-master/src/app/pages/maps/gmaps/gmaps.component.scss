@@ -1,0 +1,65 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+
+  nb-card-body {
+    padding: 0;
+  }
+
+  ::ng-deep agm-map {
+    width: 100%;
+    height: nb-theme(card-height-large);
+  }
+}
+@import 'bootstrap/scss/mixins/breakpoints';
+@import '@nebular/theme/styles/global/breakpoints';
+
+
+
+@include nb-install-component() {
+  nb-card-body {
+    display: block;
+
+    button {
+      width: 100%;
+      margin-bottom: 2rem;
+      display: block;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .result-from-dialog {
+    flex-direction: column;
+  }
+
+  .form-input-card {
+    nb-card-body {
+      display: block;
+    }
+  }
+
+  .row {
+    display: flex;
+  }
+  
+  .col-lg-3 {
+    float: right;
+  }
+  
+  .sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+}
+

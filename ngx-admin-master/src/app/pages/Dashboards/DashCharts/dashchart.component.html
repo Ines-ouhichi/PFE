@@ -1,0 +1,32 @@
+<nb-card>
+    <nb-card-header>Charts for a dashboards</nb-card-header>
+    <nb-card-body>
+<!--<div *ngFor="let visual of visuals">-->
+
+        <div class="card-container">
+            <nb-card *ngFor="let visual of visuals" class="card-item" [style.width.px]="550" [style.height.px]="350">
+              <nb-card-header>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span>{{ visual.titre }}</span>
+                <button type="button" class="btn-close" aria-label="Close" placement="left" (click)="closeCard(chart.id)" (cancel)="cancelClicked=true">
+                  <nb-icon icon="close-outline"></nb-icon>
+                </button>
+                </div>
+              </nb-card-header>
+              <nb-card-body>
+        
+                <canvas [id]="visual.titre"></canvas>
+                <ngx-charts-chart [results]="chartInstances[visual.titre] " [legend]="false">
+        
+                </ngx-charts-chart>
+                <!--<div>{{ chartInstances[chart.titre] }}</div>-->
+        
+                
+              </nb-card-body>
+              
+            </nb-card>
+            
+          </div>      
+    </nb-card-body>
+  </nb-card>
+  

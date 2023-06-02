@@ -1,0 +1,58 @@
+// @import '../../../../@theme/styles/themes';
+
+// @include nb-install-component() {
+//   input {
+//     width: 100%;
+//   }
+
+//   .cancel {
+//     margin-right: 1rem;
+//   }
+
+//   .cancel {
+//     color: red;
+//   }
+  
+//   .submit-button {
+//     background-color: green;
+//     color: white;
+//     font-weight: bold;
+//   }
+// }
+@import '../../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  .buttons-row {
+    margin: -0.5rem;
+  }
+
+  button[nbButton] {
+    margin: 0.5rem;
+  }
+
+  .action-icon {
+    @include nb-ltr(margin-right, 0.5rem);
+    @include nb-rtl(margin-left, 0.5rem);
+  }
+
+  .actions-card {
+    height: 8rem;
+  }
+
+  
+//   button {
+//     padding: 10px 20px;
+//     border-radius: 5px;
+//     font-size: 16px;
+//   }
+  
+//   button.cancel {
+//     background-color: #ff0000;
+//     color: #ffffff;
+//   }
+  
+//   button.submit {
+//     background-color: #00ff00;
+//     color: #ffffff;
+//   }
+ }
